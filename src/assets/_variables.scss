@@ -1,0 +1,15 @@
+:root {
+
+  [data-theme="darkMode"] {
+    --color-darkBlue-elements: hsl(209, 23%, 22%);
+    --color-veryDarkBlue-background: hsl(207, 26%, 17%);
+    --color-white: hsl(0, 0%, 100%);
+  }
+
+  [data-theme="lightMode"] {
+    --color-veryDarkBlue-text: hsl(200, 15%, 8%);
+    --color-darkGray-input: hsl(207, 26%, 17%);
+    --color-veryLightGray-background: hsl(0, 0%, 98%);
+    --color-white: hsl(0, 0%, 100%);
+  }
+}
