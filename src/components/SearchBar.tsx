@@ -45,6 +45,7 @@ function SearchBar({onLoadCountries}: IProps) {
         return () => {
             clearTimeout(timer);
         }
+        //eslint-disable-next-line
     }, [fillArray, inputRef])
 
     return (
