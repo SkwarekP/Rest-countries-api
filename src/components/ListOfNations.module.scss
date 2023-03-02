@@ -1,4 +1,6 @@
 .desktop__flex__row {
+  background: var(--color-background);
+
   .card {
     background: var(--color-background);
     width: 75%;
@@ -56,6 +58,7 @@
 @media (min-width: 900px) {
 
   .desktop__flex__row {
+    background: var(--color-background);
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;

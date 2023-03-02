@@ -9,8 +9,10 @@
   background: var(--color-background);
 }
 
+
 .container {
   padding: 1rem;
+  background: var(--color-background);
 }
 
 .desktop-flex-filters {
@@ -27,6 +29,7 @@
     }
 
     .desktop-flex-filters {
+
       display: flex;
       justify-content: space-between;
       margin: 0 5rem;
