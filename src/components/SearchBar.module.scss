@@ -26,5 +26,17 @@
     color: gray;
   }
 
+}
 
+@media (min-width: 900px) {
+  .searchBar {
+
+    input {
+      max-width: 500px;
+    }
+
+    input::placeholder {
+      font-size: 1rem;
+    }
+  }
 }

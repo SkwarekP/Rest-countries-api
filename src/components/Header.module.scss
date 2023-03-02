@@ -15,3 +15,17 @@
   }
 
 }
+
+@media (min-width: 900px) {
+  .header__container {
+    padding: 2rem 4rem;
+
+    h1 {
+      font-size: 1.4rem;
+    }
+
+    .changeTheme__btn {
+      font-size: .9rem;
+    }
+  }
+}
