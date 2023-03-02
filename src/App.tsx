@@ -8,7 +8,8 @@ function App() {
     return (
         <Routes>
             <Route path="/" element={<MainPage/>}/>
-            <Route path="/country/:name" element={<CountryDesc/>}/>
+            <Route path="/country/:name" element={<CountryDesc theme={() => {
+            }}/>}/>
         </Routes>
     );
 }

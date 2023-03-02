@@ -13,6 +13,8 @@ function MainPage() {
     const [isSearched, setIsSearched] = useState<boolean>(false);
     const [error, setError] = useState({isError: false, message: ""})
     const [isLoading, setIsLoading] = useState(true);
+    const [filteredRegion, setFilteredRegion] = useState("");
+    const [theme, setTheme] = useState("lightMode");
 
     const loadCountriesHandler = (countriesArray: [], flag: boolean, isError: boolean, message: string, isLoading: boolean): void => {
 
@@ -20,36 +22,45 @@ function MainPage() {
             setDataNations(data);
             setIsSearched(flag);
             setError({isError, message});
-            setIsLoading(false);
+            setIsLoading(isLoading);
 
         } else if (flag && !isError && message === "") {
             setDataNations(countriesArray);
             setIsSearched(flag);
             setError({isError, message});
-            setIsLoading(false);
+            setIsLoading(isLoading);
 
         } else if (!flag && isError && message !== "") {
             setIsSearched(flag);
             setError({isError, message});
-            setIsLoading(false);
+            setIsLoading(isLoading);
         }
     }
 
+    const receiveFilteredRegion = (region: string) => {
+        setFilteredRegion(region);
+    }
+
+    const onChangeTheme = (theme: string) => {
+        setTheme(theme);
+    }
+
     return (
-        <>
-            <Header/>
+        <div data-theme={theme}>
+            <Header theme={onChangeTheme}/>
             <div className="container">
                 <div className="mobile-block">
                     <SearchBar onLoadCountries={loadCountriesHandler}/>
-                    <Filter/>
+                    <Filter filteredRegion={receiveFilteredRegion}/>
                 </div>
                 <div className="desktop-flex-filters">
                     <SearchBar onLoadCountries={loadCountriesHandler}/>
-                    <Filter/>
+                    <Filter filteredRegion={receiveFilteredRegion}/>
                 </div>
-                <ListOfNations dataOfNations={dataNations} flag={isSearched} error={error} loading={isLoading}/>
+                <ListOfNations dataOfNations={dataNations} flag={isSearched} error={error} loading={isLoading}
+                               filteredRegion={filteredRegion}/>
             </div>
-        </>
+        </div>
     )
 }
 

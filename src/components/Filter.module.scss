@@ -10,6 +10,7 @@
     font-size: .78rem;
     background: var(--color-white);
     border: none;
+    color: var(--color-text);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 4px 20px 0px;
     cursor: pointer;
   }
@@ -17,6 +18,8 @@
   option {
     background: var(--color-white);
     font-size: .9rem;
+    color: var(--color-text);
+
   }
 
 }
