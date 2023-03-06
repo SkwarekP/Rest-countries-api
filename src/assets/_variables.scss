@@ -1,0 +1,17 @@
+:root {
+
+  [data-theme="darkMode"] {
+    --color-elements: hsl(209, 23%, 22%);
+    --color-background: hsl(207, 26%, 17%);
+    --color-text: hsl(0, 0%, 100%);
+    --color-shadow: rgba(100, 100, 111, 0.2);
+  }
+
+  [data-theme="lightMode"] {
+    --color-elements: hsl(0, 0%, 100%);
+    --color-input: hsl(0, 0%, 52%);
+    --color-background: hsl(0, 0%, 98%);
+    --color-shadow: lightgray;
+    --color-text: black;
+  }
+}

@@ -1,0 +1,201 @@
+
+.desc__container {
+  background: var(--color-background);
+  padding: 2rem;
+
+  &__content__mobile {
+    display: block;
+  }
+
+  .button__container {
+    position: relative;
+
+    button {
+      border: none;
+      font-size: .95rem;
+      color: var(--color-elements);
+      background: var(--color-background);
+      padding: .5rem 1.5rem .5rem 3rem;
+      border-radius: 5px;
+      box-shadow: lightgray 0px 4px 20px 0px;
+      cursor: pointer;
+    }
+
+    button::before {
+      content: url("./assets/images/arrow_left_filled_icon_200025.svg");
+      position: absolute;
+      left: 1.2rem;
+      top: 7px;
+
+    }
+
+  }
+
+  .flag__container {
+    margin: 3rem 0;
+    width: 100%;
+    height: auto;
+    background: inherit;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .description {
+    line-height: 2.2;
+
+    .border__countries__desktop {
+      display: none;
+    }
+
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: .5rem;
+    }
+
+    p {
+      font-size: .9rem;
+      color: var(--color-veryDarkBlue-text);
+      font-weight: 500;
+    }
+
+    span {
+      color: var(--color-input);
+    }
+
+    .break__line {
+      margin-top: 2rem;
+    }
+  }
+
+  .border__countries {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+
+    h4 {
+      font-weight: 500;
+    }
+
+    &__flex {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+
+      button {
+        border: none;
+        font-size: .8rem;
+        color: var(--color-elements);
+        padding: .5rem 1rem;
+        border-radius: 5px;
+        box-shadow: lightgray 0px 4px 20px 0px;
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 500px) and (max-width: 899px) {
+  .desc__container {
+
+
+    &__content {
+      margin: 0 auto;
+      max-width: 400px;
+
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .desc__container {
+    margin: 2rem;
+
+
+    &__content__mobile {
+      display: none;
+    }
+
+    &__content {
+      display: flex;
+      gap: 5rem;
+      align-items: center;
+      margin: 4rem 0;
+      width: 1500px;
+      height: auto;
+
+
+      .flag__container {
+        margin: 0;
+        max-width: 600px;
+        height: auto;
+        background: inherit;
+
+        img {
+          width: 100%;
+        }
+      }
+
+
+      .description {
+        display: flex;
+        gap: 4rem;
+        width: 700px;
+
+
+        .border__countries__desktop {
+          margin-top: 2rem;
+          display: block;
+
+          button {
+            max-width: 100px;
+          }
+        }
+
+        &__row {
+          margin-top: -2rem;
+          align-self: flex-start;
+
+          .break__line {
+            margin: 0;
+          }
+
+          h3 {
+            font-size: 1.8rem;
+          }
+
+          p {
+            font-size: 1rem;
+            color: var(--color-veryDarkBlue-text);
+            font-weight: 600;
+          }
+
+          span {
+            color: var(--color-input);
+            font-weight: 500;
+          }
+
+          button {
+            cursor: pointer;
+          }
+
+          button:hover {
+            background: black;
+            color: var(--color-elements);
+          }
+
+        }
+
+      }
+
+      .border__countries {
+        display: none;
+      }
+    }
+
+  }
+}
