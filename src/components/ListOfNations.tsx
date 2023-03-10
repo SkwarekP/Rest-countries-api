@@ -38,7 +38,7 @@ function ListOfNations({dataOfNations, flag, error, loading, filteredRegion}: IP
         }
     )
 
-    const filteredDataByRegion: JSX.Element[] = dataOfNations.map((item: any) => item).filter((item: any) => item.region === filteredRegion).map((item: any) => (
+    const filteredDataByRegion: JSX.Element[] = dataOfNations.filter((item: any) => item.region === filteredRegion).map((item: any) => (
         <div className={classes.card} key={item.alpha2Code} datatype={item.name} onClick={redirectToDescPage}>
             <div className={classes.card__flag__container}>
                 <img src={item.flags.png} alt={item.flag}/>
